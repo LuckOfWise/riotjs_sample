@@ -1,0 +1,15 @@
+%sample
+  %h3 { message }
+  %ul
+    %li{each: "{ techs }"} { name }
+  :javascript
+    this.message = 'Hello, Riot!'
+    this.techs = [
+      { name: 'HTML' },
+      { name: 'JavaScript' },
+      { name: 'CSS' }
+    ]
+  :css
+    :scope { font-size: 2rem }
+    h3 { color: #444 }
+    ul { color: #999 }
