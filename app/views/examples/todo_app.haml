@@ -1,0 +1,20 @@
+%todo
+%script{type: 'riot/tag', src: examples_todo_app_path(format: :tag)}
+
+<!-- mount the tag -->
+:coffee
+  $ ->
+    riot.mount 'todo',
+      title: 'I want to behave!'
+      items: [
+        {
+          title: 'Avoid excessive caffeine'
+          done: true
+        }
+        {
+          title: 'Hidden item'
+          hidden: true
+        }
+        { title: 'Be less provocative' }
+        { title: 'Be nice to people' }
+      ]
