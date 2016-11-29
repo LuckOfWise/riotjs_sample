@@ -1,5 +1,10 @@
 class ExamplesController < ApplicationController
+
   def live_demo
-    render layout: false, format: :tag
+    respond_to do |format|
+      format.tag { render layout: false, format: :tag }
+      format.any
+    end
   end
+  
 end
